@@ -1,0 +1,13 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"message": "Bem-vindo ao API de Investimentos com CoreWeave"}
+
+@app.get("/investment-analysis")
+def analyze_investment(data: dict):
+    # Lógica de análise usando computação no CoreWeave
+    result = {"ROI": 12.5, "risco": "baixo"}
+    return result
